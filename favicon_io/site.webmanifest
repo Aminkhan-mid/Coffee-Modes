@@ -18,7 +18,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#1a0b05",
-  "theme_color": "#6b4e3d",
+  "theme_color": "#1a0b05",
   "lang": "en",
   "scope": "/",
   "id": "coffee-modes-app"
