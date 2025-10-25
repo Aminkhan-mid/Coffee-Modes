@@ -78,25 +78,26 @@ nav{
 /***********/
 .input-container{
     width: 90%;
-    border: 1px solid;
+    height: 55px;
+    border: 1px solid #5e3727;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40px;
     padding-left: 1em;
     padding-right: 1em;
-    border-radius:2em;
+    border-radius:3em;
     margin: 2em auto;
-    opacity: 80%;
 }
 .coffee-inp{
+    font-size: 1.2rem;
     border: none;
     outline: none;
     width: 90%;
     padding: 0.5em;
     color: white;
-    font-weight: bold;
 }
 .input-container i{
+    font-size: 1.6rem;
+    opacity: 60%;
     cursor: pointer;
 }
