@@ -21,7 +21,7 @@ nav{
     align-items: center;
 }
 .bars{
-    background: #23130c;
+    background: #5e3727;
     box-shadow: 0px 0px 10px #5e3727;
     width: 50px;
     height: 50px;
@@ -31,6 +31,10 @@ nav{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+.bars i{ 
+    background: transparent;
+    font-size: 1.3rem;
 }
 .user-greet{
     font-size: 0.6rem;
@@ -50,3 +54,20 @@ nav{
     margin: 1em;
 }
 
+/***********/
+/* Coffee Message */
+/***********/
+.coffee-message{
+    font-size: 2rem;
+    width: fit-content;
+    margin-left: 0.5em;
+    margin-top: 0.3em;
+}
+.start-day{
+    font-weight: bold;
+}
+.right-coffee{
+    text-decoration:solid;
+    font-style: italic;
+    opacity: 70%;
+}
