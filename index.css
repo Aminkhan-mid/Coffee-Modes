@@ -72,3 +72,31 @@ nav{
     font-style: italic;
     opacity: 70%;
 }
+
+/***********/
+/*  INPUT */
+/***********/
+.input-container{
+    width: 90%;
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius:2em;
+    margin: 2em auto;
+    opacity: 80%;
+}
+.coffee-inp{
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 0.5em;
+    color: white;
+    font-weight: bold;
+}
+.input-container i{
+    cursor: pointer;
+}
