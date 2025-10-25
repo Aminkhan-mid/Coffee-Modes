@@ -5,6 +5,7 @@
     background-color: #1a0b05;
     color: white;
     font-family: sans-serif;
+    padding-top: env(safe-area-inset-top);
 }
 
 /***********/
