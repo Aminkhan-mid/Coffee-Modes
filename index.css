@@ -101,3 +101,35 @@ nav{
     opacity: 60%;
     cursor: pointer;
 }
+
+/***********/
+/*  Coffee Cards */
+/***********/
+#coffeeCards-container{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin: 1em auto;
+}
+.coffee-card{
+    background-color: #6b4e3d;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    padding: 1em;
+    cursor: pointer;
+}
+.coffeeCard-img{
+    margin-bottom: 1em;
+    background: transparent;
+    width: 80px;
+    height: 100px;
+}
+.coffee-card p{
+    font-size: 0.8rem;
+    background: transparent;
+    width: fit-content;
+}

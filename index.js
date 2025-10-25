@@ -1,5 +1,6 @@
 const navPfp = document.getElementById("nav-pfp")
 const userGreet = document.getElementById("user-greet")
+const coffeeCardsContainer = document.getElementById("coffeeCards-container")
 const greetings =  [
     "👋 Hello",
     "🌞 Good Morning",
@@ -52,9 +53,36 @@ const greetings =  [
     "👑 Hello, warrior!"
   ]
 
+const coffeeCards = [{
+    img: "./imgs/cappuccino.png",
+    name: "Cappuccino"
+},
+{
+    img: "./imgs/americano.png",
+    name: "Americano"
+},
+{
+    img: "./imgs/espresso.png",
+    name: "Espresso"
+},
+{
+    img: "./imgs/macchiato.png",
+    name: "Macchiato"
+}]
 
 
   
 navPfp.src = `https://api.dicebear.com/9.x/lorelei/svg?seed=${Math.random()}&r=${Date.now()}`
 const random = greetings[Math.floor(Math.random() * greetings.length)]
 userGreet.textContent = random
+
+coffeeCards.forEach(card =>{
+       coffeeCardsContainer.innerHTML += `
+       <div class="coffee-card">
+            <img 
+            class="coffeeCard-img"
+            src="${card.img}" alt="${card.name}">
+            
+            <p>${card.name}</p>
+        </div>`
+})
