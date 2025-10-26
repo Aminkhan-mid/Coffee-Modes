@@ -203,7 +203,7 @@ label{
 .qntDiv-flex{
     display: flex;
     justify-content: space-around;
-
+    margin-bottom: 2em;
 }
 .qntDiv-flex span{
     display: flex;
