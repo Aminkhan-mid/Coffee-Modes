@@ -56,25 +56,25 @@ const greetings =  [
   ]
 
 const coffeeCards = [{
-    img: "./imgs/cappuccino.png",
+    img: "../imgs/cappuccino.png",
     name: "Cappuccino"
 },
 {
-    img: "./imgs/americano.png",
+    img: "../imgs/americano.png",
     name: "Americano"
 },
 {
-    img: "./imgs/espresso.png",
+    img: "../imgs/espresso.png",
     name: "Espresso"
 },
 {
-    img: "./imgs/macchiato.png",
+    img: "../imgs/macchiato.png",
     name: "Macchiato"
 }]
 
 const coffeeMenu = [
        {
-        img: "./imgs/blackCoffee.avif",
+        img: "../imgs/blackCoffee.avif",
         name: "Black Coffee",
         details: "with cream",
         ratings: 4.3,
@@ -83,7 +83,7 @@ const coffeeMenu = [
         inCart: false
     },
     {
-        img: "./imgs/hotChocolate.avif",
+        img: "../imgs/hotChocolate.avif",
         name: "Hot Chocolate",
         details: "with milk",
         ratings: 4.9,
@@ -92,7 +92,7 @@ const coffeeMenu = [
         inCart: false
     },
     {
-        img: "./imgs/tiramisu.avif",
+        img: "../imgs/tiramisu.avif",
         name: "Tiramisu",
         details: "with cocoa",
         ratings: 4.2,
@@ -101,7 +101,7 @@ const coffeeMenu = [
         inCart: false
     },
     {
-        img: "./imgs/iceLatte.avif",
+        img: "../imgs/iceLatte.avif",
         name: "Ice Latte",
         details: "with ice",
         ratings: 4.6,
@@ -110,7 +110,7 @@ const coffeeMenu = [
         inCart: false
     },
     {
-        img: "./imgs/filterCoffee.avif",
+        img: "../imgs/filterCoffee.avif",
         name: "Filter Coffee",
         details: "with machine",
         ratings: 5.0,

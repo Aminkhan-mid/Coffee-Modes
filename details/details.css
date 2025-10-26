@@ -32,7 +32,7 @@ i{
 /* Food Image */
 /***********/
 .bg-img{
-    background-image:url(./imgs/blackCoffee.avif);
+    background-image:url(../imgs/blackCoffee.avif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
