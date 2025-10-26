@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
     background-color: #1a0b05;
     color: white;
     font-family: sans-serif;
     padding-top: env(safe-area-inset-top);
 }
-
 /***********/
 /* Nav */
 /***********/
@@ -59,7 +60,7 @@ nav{
 /* Coffee Message */
 /***********/
 .coffee-message{
-    font-size: 2rem;
+    font-size: 1.6rem;
     width: fit-content;
     margin-left: 0.5em;
     margin-top: 0.3em;
@@ -95,6 +96,7 @@ nav{
     width: 90%;
     padding: 0.5em;
     color: white;
+    background: transparent;
 }
 .input-container i{
     font-size: 1.6rem;
@@ -136,4 +138,82 @@ nav{
     font-size: 0.8rem;
     background: transparent;
     width: fit-content;
+}
+
+/***********/
+/*  Coffee Menus */
+/***********/
+.todays-deal{
+    width: fit-content;
+    font-size: 1.4rem;
+    margin: 1.3em 0 0 1.25em;
+}
+.menu-cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 2em;
+    background: #22140d;
+    border-radius: 1em;
+    cursor: pointer;
+    height: 130px;
+    box-shadow: 0px 0px 5px black;
+}
+.menuFlexOne{
+    display: flex;
+}
+.foodDetails-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.foodDetails-flexTwo{
+    padding: 1em;
+    line-height: 1.5;
+}
+.food-img{
+    width: 110px;
+    height: 127px;
+    border-radius: 1em;
+    padding: 0.05em;
+}
+.fa-star{
+    color: #cd7740;
+}
+.food-details{
+    opacity: 40%;
+    line-height: 0.9;
+}
+.food-price{
+    font-size: 1rem;
+    margin-top: 0.3em;
+}
+.menuFlexTwo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+.menuFlexTwo i{
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em;
+}
+.fa-heart{
+    width: 10px;
+    height: 10px;
+    border-radius: 1em;
+    background-color: #6b4e3d;
+    border:1px solid;
+}
+.fa-plus{
+    background: #cd7740;
+    width: 10px;
+    height: 10px;
+    border-radius: 1em;
+    border:1px solid;
 }

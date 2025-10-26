@@ -1,6 +1,8 @@
 const navPfp = document.getElementById("nav-pfp")
 const userGreet = document.getElementById("user-greet")
 const coffeeCardsContainer = document.getElementById("coffeeCards-container")
+const menuContainer = document.getElementById("menu-container")
+
 const greetings =  [
     "👋 Hello",
     "🌞 Good Morning",
@@ -70,6 +72,53 @@ const coffeeCards = [{
     name: "Macchiato"
 }]
 
+const coffeeMenu = [
+       {
+        img: "./imgs/blackCoffee.avif",
+        name: "Black Coffee",
+        details: "with cream",
+        ratings: 4.3,
+        price: 100,
+        isLiked: false,
+        inCart: false
+    },
+    {
+        img: "./imgs/hotChocolate.avif",
+        name: "Hot Chocolate",
+        details: "with milk",
+        ratings: 4.9,
+        price: 107,
+        isLiked: false,
+        inCart: false
+    },
+    {
+        img: "./imgs/tiramisu.avif",
+        name: "Tiramisu",
+        details: "with cocoa",
+        ratings: 4.2,
+        price: 120,
+        isLiked: false,
+        inCart: false
+    },
+    {
+        img: "./imgs/iceLatte.avif",
+        name: "Ice Latte",
+        details: "with ice",
+        ratings: 4.6,
+        price: 160,
+        isLiked: false,
+        inCart: false
+    },
+    {
+        img: "./imgs/filterCoffee.avif",
+        name: "Filter Coffee",
+        details: "with machine",
+        ratings: 5.0,
+        price: 50,
+        isLiked: false,
+        inCart: false
+    },
+]
 
   
 navPfp.src = `https://api.dicebear.com/9.x/lorelei/svg?seed=${Math.random()}&r=${Date.now()}`
@@ -86,3 +135,31 @@ coffeeCards.forEach(card =>{
             <p>${card.name}</p>
         </div>`
 })
+
+
+coffeeMenu.forEach(menu => {
+    menuContainer.innerHTML += `
+    <div class="menu-cards">
+        <span class="menuFlexOne">
+            <img class="food-img" src="${menu.img}" alt="${menu.name}">
+            <div class="foodDetails-flex">
+                <span class="foodDetails-flexTwo">
+                    <p class="food-ratings">
+                    <i class="fa-solid fa-star"></i>
+                    ${menu.ratings}
+                    </p>
+                    <p class="food-name">${menu.name}</p>
+                    <p class="food-details">${menu.details}</p>
+                    <p class="food-price">₹${menu.price}</p>
+                </span>
+            </div>
+        </span>
+        <span class="menuFlexTwo">
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-plus"></i>
+        </span>
+    </div>
+    `
+})
+
+

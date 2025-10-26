@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1a0b05;
+    color: white;
+    font-family: sans-serif;
+    padding-top: env(safe-area-inset-top);
+    height: 100%;
+}
+i{
+    cursor: pointer;
+    color: antiquewhite;
+}
+/***********/
+/* Back and Like icons */
+/***********/
+.backLike-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5em 1em;
+}
+.backLike-iconDiv{
+    background-color: #311d14;
+    padding: 1em;
+    border-radius: 50%;
+}
+/***********/
+/* Food Image */
+/***********/
+.bg-img{
+    background-image:url(./imgs/blackCoffee.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+/***********/
+/* Food Details */
+/***********/
+
+/* Food name and price */
+.details-flexOne{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em;
+}
+.food-inDetails{
+    line-height: 1.3;
+}
+.ratings-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4em;
+}
+.fa-star{
+    color: #cd7740;
+}
+.reviews{
+    opacity: 40%;
+    font-size: 0.8rem;
+}
+.food-name{
+    font-size: 1.6rem;
+}
+.key-ingredient{
+    opacity: 40%;
+    line-height: 0.9;
+}
+.price-p{
+    opacity: 40%;
+    font-size: 0.9rem;
+    margin-bottom: 0.2em;
+}
+.food-price{
+    font-size: 1.5rem;
+    color: #cd7740;
+}
+
+/* Food Description */
+
+.description-p{
+    width: fit-content;
+    margin: 0.5em 1em;
+}
+.details-two{
+    margin: 1em;
+}
+.initial-text{
+    margin: 0 1em;
+    opacity: 50%;
+    font-size: 0.9rem;
+}
+#ch {
+    display: none;
+}
+#ch:checked ~ .content{
+    display: block;
+}
+#ch:checked ~ label{
+    display: none;
+}
+#ch:checked ~ .initial-text{
+    display: none;
+}
+.full-text{
+    opacity: 50%;
+    font-size: 0.9rem;
+    margin: 0 1em;
+}
+.content{
+    display: none;
+}
+label{
+    display: inline-block;
+    cursor: pointer;
+    color: #cd7740;
+    background-color: #1a0b05;
+    padding: 3px 13px;
+    margin-top: 12px;
+    border-radius: 4px;
+}
+/***********/
+/* Dropdown Menus */
+/***********/
+.dropdown-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1em;
+    gap: 1em;
+}
+
+.select{
+    background-color: #22140d;
+    box-shadow: 0px 0px 3px #cd7740;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1em;
+    cursor: pointer;
+    transition:background 0.3s;
+    width: 150px;
+    padding: 1em;
+}
+.select-clicked{
+    border: 2px solid #cd7740;
+    box-shadow: 0 0 0.8em #22140d;
+}
+.select:hover{
+    background-color: #22140d;
+}
+.caret{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid white;
+    transition: 0.3s;
+}
+.caret-rotate{
+    transform: rotate(180deg);
+}
+
+.menu{
+    list-style:none;
+    display: none;
+    padding: 0.2em 0.5em;
+    background: #22140d;
+    border: 1px solid black;
+    box-shadow: 0 0 10px black;
+    border-radius: 1em;
+    color: white;
+    transition: 0.2s;
+    z-index: 1;
+    margin-top: 0.5em;
+}
+.menu li{
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+.menu li:hover{
+    background: #cd7740;
+}
+.active{
+    background-color: #cd7740;
+}
+.menu-open{
+    display: block;
+    opacity: 1;
+}
+
+
+/***********/
+/* Quantity and Buy now Button */
+/***********/
+.qntDiv-flex{
+    display: flex;
+    justify-content: space-around;
+
+}
+.qntDiv-flex span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #311d14;
+    box-shadow: 0px 0px 5px black;
+    width: 130px;
+    height: 50px;
+    border-radius: 2em;
+    padding:  0.2em;
+}
+.spanDivs{
+    background-color: #1a0b05;
+    border-radius: 50%;
+    padding: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: lightgoldenrodyellow;
+}
+
+.buyNow-btn{
+    width: 180px;
+    border: none;
+    border-radius: 2em;
+    background:#cd7740;
+    font-size: 1.4rem;
+    color: antiquewhite;
+    cursor: pointer;
+}
