@@ -49,7 +49,7 @@ export const coffeeMenu = [
         keyIngredient: "with machine",
         initText:"Slow-brewed decoction blended with rich, frothy milk. Traditional aroma, modern comfort.",
         description:"Slow-brewed decoction blended with rich, frothy milk. Traditional aroma, modern comfort. It’s the taste of morning nostalgia, with every pour bringing that homely, South Indian warmth.",
-        ratings: 5.0,
+        ratings: 4.9,
         price: 50,
         isLiked: false,
         inCart: false

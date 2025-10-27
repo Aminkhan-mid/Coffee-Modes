@@ -2,13 +2,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
-body{
-    background-color: #1a0b05;
-    color: white;
-    font-family: sans-serif;
-    padding-top: env(safe-area-inset-top);
+:root{
+  /* 🌞 Light mode */
+  --bg-color: #f8f2f0;
+  --text-color: #1a0b05;
+  --card-bg: #ffffff;
+  --accent: #cd7740;
+  --nav-bg: #e8dcd6;
+  --secondary-bg: #f0e4dc;
 }
+[data-theme="dark"] {
+  /* 🌙 Dark mode */
+  --bg-color: #1a0b05;
+  --text-color: #ffffff;
+  --card-bg: #22140d;
+  --accent: #cd7740;
+  --nav-bg: #311d14;
+  --secondary-bg: #6b4e3d;
+}
+
+body {
+     background-color: var(--bg-color);
+     color: var(--text-color);
+}
+
+
 /***********/
 /* Nav */
 /***********/
@@ -22,22 +42,7 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-.bars{
-    background: #5e3727;
-    box-shadow: 0px 0px 10px #5e3727;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-.bars i{ 
-    background: transparent;
-    font-size: 1.3rem;
-}
+
 .user-greet{
     font-size: 0.6rem;
     opacity: 70%;
@@ -48,12 +53,67 @@ nav{
     width: fit-content;
 }
 .nav-pfp{
-    background-color: #6b4e3d;
+    background-color: var(--secondary-bg);
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid var(--text-color);
     margin: 1em;
+}
+
+.bars{
+    margin: -10px 1em 1em 1em;
+    cursor: pointer;
+}
+
+.theme-toggle {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+    cursor: pointer;
+    background: transparent;
+}
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background-color: #d6ccc2; /* light beige background */
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.slider::before {
+  content: "☀️";
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* When checked */
+.theme-toggle input:checked + .slider {
+  background-color: #6b4e3d; /* your theme color */
+}
+
+.theme-toggle input:checked + .slider::before {
+  content: "🌙";
+  transform: translateX(22px);
+  background-color: #1a0b05;
 }
 
 /***********/
@@ -80,7 +140,7 @@ nav{
 .input-container{
     width: 90%;
     height: 55px;
-    border: 1px solid #5e3727;
+    border: 1px solid var(--text-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -95,13 +155,14 @@ nav{
     outline: none;
     width: 90%;
     padding: 0.5em;
-    color: white;
+    color: var(--text-color);
     background: transparent;
 }
 .input-container i{
     font-size: 1.6rem;
     opacity: 60%;
     cursor: pointer;
+    color: var(--text-color);
 }
 
 /***********/
@@ -117,7 +178,7 @@ nav{
     margin: 1em;
 }
 .coffee-card{
-    background-color: #6b4e3d;
+    background-color: var(--secondary-bg);
     width: 100px;
     height: 120px;
     display: flex;
@@ -153,11 +214,11 @@ nav{
     justify-content: space-between;
     align-items: center;
     margin: 1em 2em;
-    background: #22140d;
+    background: var(--card-bg);
     border-radius: 1em;
     cursor: pointer;
     height: 130px;
-    box-shadow: 0px 0px 5px black;
+    box-shadow: 0px 0px 5px var(--text-color);
 }
 .menuFlexOne{
     display: flex;
@@ -179,7 +240,7 @@ nav{
     padding: 0.05em;
 }
 .fa-star{
-    color: #cd7740;
+    color: var(--accent);
 }
 .food-details{
     opacity: 40%;
@@ -207,22 +268,16 @@ nav{
     width: 10px;
     height: 10px;
     border-radius: 1em;
-    background-color: #6b4e3d;
-    border:1px solid;
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
 }
 .plus{
-    background: #cd7740;
+    background: var(--accent);
     width: 10px;
     height: 10px;
     border-radius: 1em;
-    border:1px solid;
+
 }
-
-
-
-
-
-
 
 
 
@@ -245,9 +300,12 @@ i{
     margin: 0.5em 1em;
 }
 .backLike-iconDiv{
-    background-color: #311d14;
+    background-color: var(--nav-bg);
     padding: 1em;
     border-radius: 50%;
+}
+.backLike-iconDiv i{
+    color: var(--text-color);
 }
 /***********/
 /* Food Image */
@@ -279,7 +337,7 @@ i{
     gap: 0.4em;
 }
 .fa-star{
-    color: #cd7740;
+    color: var(--accent);
 }
 .reviews{
     opacity: 40%;
@@ -299,7 +357,7 @@ i{
 }
 .menu-price{
     font-size: 1.5rem;
-    color: #cd7740;
+    color: var(--accent);
 }
 
 /* Food Description */
@@ -339,8 +397,8 @@ i{
 label{
     display: inline-block;
     cursor: pointer;
-    color: #cd7740;
-    background-color: #1a0b05;
+    color: var(--accent);
+    background-color: var(--bg-color);
     padding: 3px 13px;
     margin-top: 12px;
     border-radius: 4px;
@@ -356,8 +414,8 @@ label{
 }
 
 .select{
-    background-color: #22140d;
-    box-shadow: 0px 0px 3px #cd7740;
+    background-color: var(--card-bg);
+    box-shadow: 0px 0px 3px var(--accent);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -368,18 +426,18 @@ label{
     padding: 1em;
 }
 .select-clicked{
-    border: 2px solid #cd7740;
-    box-shadow: 0 0 0.8em #22140d;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 0.8em var(--card-bg);
 }
 .select:hover{
-    background-color: #22140d;
+    background-color: var(--card-bg);
 }
 .caret{
     width: 0;
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 7px solid white;
+    border-top: 7px solid var(--text-color);
     transition: 0.3s;
 }
 .caret-rotate{
@@ -390,11 +448,11 @@ label{
     list-style:none;
     display: none;
     padding: 0.2em 0.5em;
-    background: #22140d;
-    border: 1px solid black;
-    box-shadow: 0 0 10px black;
+    background: var(--card-bg);
+    border: 1px solid var(--text-color);
+    box-shadow: 0 0 10px var(--text-color);
     border-radius: 1em;
-    color: white;
+    color: var(--text-color);
     transition: 0.2s;
     z-index: 1;
     margin-top: 0.5em;
@@ -406,10 +464,10 @@ label{
     cursor: pointer;
 }
 .menu li:hover{
-    background: #cd7740;
+    background: var(--accent);
 }
 .active{
-    background-color: #cd7740;
+    background-color: var(--accent);
 }
 .menu-open{
     display: block;
@@ -429,29 +487,31 @@ label{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #311d14;
-    box-shadow: 0px 0px 5px black;
+    background: var(--nav-bg);
+    box-shadow: 0px 0px 5px var(--text-color);
     width: 130px;
     height: 50px;
     border-radius: 2em;
     padding:  0.2em;
 }
 .spanDivs{
-    background-color: #1a0b05;
+    background-color: var(--bg-color);
     border-radius: 50%;
     padding: 0.8em;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: lightgoldenrodyellow;
+    color: var(--text-color);
 }
-
+.spanDivs i{
+    color: var(--text-color);
+}
 .buyNow-btn{
     width: 180px;
     border: none;
     border-radius: 2em;
-    background:#cd7740;
+    background:var(--accent);
     font-size: 1.4rem;
-    color: antiquewhite;
+    color: var(--text-color);
     cursor: pointer;
 }
