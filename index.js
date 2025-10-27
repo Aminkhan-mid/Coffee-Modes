@@ -168,12 +168,12 @@ document.addEventListener("click", (e)=>{
         <div class="qntDiv-flex">
             <span>
                 <div class="spanDivs">
-                    <i class="fa-solid fa-minus"></i>
+                    <i class="fa-solid fa-minus" data-id="${uuid}" data-type="add"></i>
                 </div>
                 
                 <p>1</p>
                 <div class="spanDivs">
-                    <i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-plus" data-id="${uuid}" data-type="sub"></i>
                 </div>
             </span>
             <button class="buyNow-btn">Buy Now</button>
@@ -322,12 +322,12 @@ document.addEventListener("click", (e)=>{
         <div class="qntDiv-flex">
             <span>
                 <div class="spanDivs">
-                    <i class="fa-solid fa-minus"></i>
+                    <i class="fa-solid fa-minus" data-id="${uuid}" data-type="add"></i>
                 </div>
                 
                 <p>1</p>
                 <div class="spanDivs">
-                    <i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-plus" data-id="${uuid}" data-type="sub"></i>
                 </div>
             </span>
             <button class="buyNow-btn">Buy Now</button>
@@ -363,26 +363,8 @@ document.addEventListener("click", (e)=>{
     })
     } 
 })
-
-
-
-
 })
 
 
 
 
-
-
-
-
-
-    // if(e.target.dataset.type === "heart"){
-    //     console.log("❤️ clicked for ID:", e.target.dataset.id)
-    // } 
-    // if(e.target.dataset.type === "plus"){
-    //     console.log("➕ clicked for ID:", e.target.dataset.id)
-    // } 
-    // if(e.target.dataset.type === "card"){
-    //     console.log("🗂️ clicked:", e.target.dataset.id)
-    // }
