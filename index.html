@@ -13,47 +13,50 @@
     <link rel="manifest" href="./favicon_io/site.webmanifest">
 </head>
 <body>
-    <nav>
-        <div class="nav-left">
-            <span class="bars">
-                <a href="./details/details.html" style="color: antiquewhite;">
-                    <i class="fa-solid fa-bars-staggered" aria-label=" Coffee Cart"></i>
-                </a>
-            </span>
-            <span>
-                <p id="user-greet" class="user-greet">👋 Good Morning</p>
-                <p class="user-name">Amin Khan</p>
-            </span>
-        </div>
-        <img id="nav-pfp" class="nav-pfp" src="" alt="Profile Pic">
-    </nav>
+    <main id="app">
 
+        <nav>
+            <div class="nav-left">
+                <span class="bars">
+                    <a href="./details/details.html" style="color: antiquewhite;">
+                        <i class="fa-solid fa-bars-staggered" aria-label=" Coffee Cart"></i>
+                    </a>
+                </span>
+                <span>
+                    <p id="user-greet" class="user-greet">👋 Good Morning</p>
+                    <p class="user-name">Amin Khan</p>
+                </span>
+            </div>
+            <img id="nav-pfp" class="nav-pfp" src="" alt="Profile Pic">
+        </nav>
+        
+        
+        <p class="coffee-message">
+            <span class="start-day">🌞 Start your day
+                <br>
+                with the </span>
+                <span class="right-coffee">
+                    Right Coffee 
+                </span>
+                ☕️
+            </p>
+            
+            <div class="input-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="coffee-inp" class="coffee-inp" placeholder="Find your best coffee">
+                <i class="fa-solid fa-microphone"></i>
+            </div>
+            
+            <div id="coffeeCards-container"></div>
+            
+            
+            <p class="todays-deal">Today's Deal</p>
+            <div id="menu-container"></div>
+            
+            
+        </main>
 
-    <p class="coffee-message">
-        <span class="start-day">🌞 Start your day
-            <br>
-         with the </span>
-        <span class="right-coffee">
-            Right Coffee 
-        </span>
-        ☕️
-    </p>
-
-    <div class="input-container">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="coffee-inp" class="coffee-inp" placeholder="Find your best coffee">
-        <i class="fa-solid fa-microphone"></i>
-    </div>
-
-    <div id="coffeeCards-container"></div>
-
-
-    <p class="todays-deal">Today's Deal</p>
-    <div id="menu-container"></div>
-
-
-
-    <script src="./index.js"></script>
+    <script src="./index.js" type="module"></script>
 </body>
 </html>
 
